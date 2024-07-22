@@ -159,11 +159,11 @@ def joint_likelihood(params, X, R, T, delta, weights, roots, lambda_, l1_ratio, 
     joint = -np.sum(integral_approx) + penalty
     return joint
 
-#df_clinical = pd.read_excel('nsclc.xlsx',sheet_name='nsclc1')
-#df_clone = pd.read_excel('nsclc.xlsx',sheet_name='nsclc2')
+#df_clinical = pd.read_excel('nsclc.xlsx',sheet_name='Clinial')
+#df_clone = pd.read_excel('nsclc.xlsx',sheet_name='Genomic')
 
-df_clinical = pd.read_excel('Metastatic Melanoma.xlsx',sheet_name='Metastatic Melanoma1')
-df_clone = pd.read_excel('Metastatic Melanoma.xlsx',sheet_name='Metastatic Melanoma2')
+df_clinical = pd.read_excel('Metastatic Melanoma.xlsx',sheet_name='Clinial')
+df_clone = pd.read_excel('Metastatic Melanoma.xlsx',sheet_name='Genomic')
 
 feature_matrices, max_clone_label, p = prepare_feature_matrices(df_clone)
 df = create_feature_dataframe(feature_matrices, df_clinical)
